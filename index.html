@@ -26,7 +26,6 @@
   "alternateName": "Done",
   "url": "https://www.donetr.com/",
   "logo": "https://www.donetr.com/done-logo.png",
-  "email": "info@donetr.com",
   "telephone": "+90-212-483-7176",
   "foundingLocation": "Istanbul, Türkiye",
   "address": {
@@ -152,6 +151,14 @@
   .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; text-align: center; }
   .contact-grid .card h3 { margin-bottom: 6px; }
   .contact-grid a { color: var(--accent); text-decoration: none; }
+  .contact-form { max-width: 640px; margin: 0 auto 40px; text-align: left; }
+  .contact-form label { display: block; font-size: .85rem; font-weight: 600; margin: 16px 0 6px; }
+  .contact-form input, .contact-form textarea {
+    width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: 8px;
+    font: inherit; color: var(--text); background: #fff;
+  }
+  .contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--accent); border-color: transparent; }
+  .contact-form button { margin-top: 20px; width: 100%; border: none; cursor: pointer; }
 
   footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--muted); font-size: .85rem; }
   footer a { color: var(--muted); }
@@ -309,18 +316,26 @@
     <div class="section-head">
       <span class="tag">Contact</span>
       <h2>Let's talk</h2>
-      <p>Have a project in mind, or want to see WeBee in action?</p>
+      <p>Have a project in mind, or want to see WeBee in action? Send us a message.</p>
     </div>
+    <form class="contact-form card" action="https://formsubmit.co/info@donetr.com" method="POST">
+      <input type="hidden" name="_subject" value="New message from donetr.com">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://www.donetr.com/thanks.html">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <label for="cf-name">Name</label>
+      <input id="cf-name" type="text" name="name" required autocomplete="name">
+      <label for="cf-email">Your email</label>
+      <input id="cf-email" type="email" name="email" required autocomplete="email">
+      <label for="cf-message">Message</label>
+      <textarea id="cf-message" name="message" rows="5" required></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
     <div class="contact-grid">
       <div class="card">
         <div class="icon">📍</div>
         <h3>Istanbul HQ</h3>
         <p>Çifte Havuzlar Mah. Eski Londra Asfaltı Cd.<br>Kuluçka Mrk. A2 Blok No: 151/1B/Z06<br>Esenler / Istanbul, Türkiye</p>
-      </div>
-      <div class="card">
-        <div class="icon">✉️</div>
-        <h3>Email</h3>
-        <p><a href="mailto:info@donetr.com">info@donetr.com</a></p>
       </div>
       <div class="card">
         <div class="icon">📞</div>
