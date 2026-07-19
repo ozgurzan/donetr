@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Done — Software, AI &amp; Hospitality Technology | donetr.com</title>
+<meta name="description" content="Done Iletisim Bilgi Sistemleri A.S. — a software company from Istanbul building AI-powered products. Creator of WeBee, the guest engagement platform used by 220+ hotels in 26 countries.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-alt: #f6f8fa;
+    --text: #1a2332;
+    --muted: #5a6a7e;
+    --accent: #0f62fe;
+    --accent-dark: #0043ce;
+    --border: #e3e8ee;
+    --radius: 12px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(255,255,255,.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -.5px; color: var(--text); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  nav a { color: var(--muted); text-decoration: none; margin-left: 28px; font-size: .95rem; font-weight: 500; }
+  nav a:hover { color: var(--accent); }
+  @media (max-width: 640px) { nav a { margin-left: 16px; font-size: .85rem; } }
+
+  /* Hero */
+  .hero { padding: 96px 0 80px; text-align: center; }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800; letter-spacing: -1px; line-height: 1.15;
+    max-width: 800px; margin: 0 auto 20px;
+  }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero p { font-size: 1.15rem; color: var(--muted); max-width: 640px; margin: 0 auto 36px; }
+  .btn {
+    display: inline-block; padding: 13px 28px; border-radius: 8px;
+    font-weight: 600; font-size: 1rem; text-decoration: none;
+    background: var(--accent); color: #fff; transition: background .2s;
+  }
+  .btn:hover { background: var(--accent-dark); }
+  .btn.ghost { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); margin-left: 12px; }
+  .btn.ghost:hover { background: var(--accent); color: #fff; }
+
+  /* Stats */
+  .stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 48px; padding: 40px 0 72px; }
+  .stat { text-align: center; }
+  .stat b { display: block; font-size: 2rem; font-weight: 800; color: var(--accent); }
+  .stat span { color: var(--muted); font-size: .9rem; }
+
+  /* Sections */
+  section { padding: 80px 0; }
+  section.alt { background: var(--bg-alt); }
+  .section-head { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+  .section-head h2 { font-size: 2rem; font-weight: 800; letter-spacing: -.5px; margin-bottom: 12px; }
+  .section-head p { color: var(--muted); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .card {
+    background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 28px;
+  }
+  section.alt .card { background: #fff; }
+  .card .icon { font-size: 1.8rem; margin-bottom: 14px; }
+  .card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: .95rem; }
+  .card a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .card a:hover { text-decoration: underline; }
+
+  .tag {
+    display: inline-block; font-size: .72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .5px; color: var(--accent); background: #e8f0fe;
+    padding: 3px 10px; border-radius: 20px; margin-bottom: 12px;
+  }
+
+  /* About */
+  .about-flex { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  @media (max-width: 760px) { .about-flex { grid-template-columns: 1fr; } }
+  .about-flex h2 { font-size: 2rem; font-weight: 800; letter-spacing: -.5px; margin-bottom: 16px; }
+  .about-flex p { color: var(--muted); margin-bottom: 14px; }
+  .awards { list-style: none; }
+  .awards li { padding: 10px 0 10px 30px; position: relative; color: var(--text); border-bottom: 1px solid var(--border); font-size: .95rem; }
+  .awards li::before { content: "🏆"; position: absolute; left: 0; }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; text-align: center; }
+  .contact-grid .card h3 { margin-bottom: 6px; }
+  .contact-grid a { color: var(--accent); text-decoration: none; }
+
+  footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--muted); font-size: .85rem; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">done<span>.</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#webee">WeBee</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero container">
+  <h1>We build software and <em>AI-powered products</em> that people love to use</h1>
+  <p>Done is an Istanbul-based software company with 25+ years of experience — from powering mobile operators to creating <strong>WeBee</strong>, the guest engagement platform trusted by hotels worldwide.</p>
+  <a class="btn" href="https://www.getwebee.com" target="_blank" rel="noopener">Discover WeBee</a>
+  <a class="btn ghost" href="#contact">Get in Touch</a>
+</section>
+
+<div class="stats container">
+  <div class="stat"><b>25+</b><span>Years of Experience</span></div>
+  <div class="stat"><b>100M+</b><span>Consumers Reached</span></div>
+  <div class="stat"><b>220+</b><span>Hotels Using WeBee</span></div>
+  <div class="stat"><b>26</b><span>Countries</span></div>
+  <div class="stat"><b>30+</b><span>Awards</span></div>
+</div>
+
+<section class="alt" id="about">
+  <div class="container about-flex">
+    <div>
+      <span class="tag">About Us</span>
+      <h2>From telecom roots to AI-driven products</h2>
+      <p>Done Iletisim Bilgi Sistemleri ve Yayincilik San. ve Tic. A.S. was founded in Istanbul and spent its first decades building large-scale mobile solutions for operators like Turkcell, Turk Telekom and Vodafone — reaching over 100 million consumers in more than 10 countries.</p>
+      <p>Today our focus is our own product: <strong>WeBee</strong>, a modern guest experience platform for hotels. Done owns the WeBee IP and trademark, and is the parent of <strong>WeBee Technology Solutions Ltd. (UK)</strong>. Alongside WeBee, we deliver AI and custom software development for selected clients.</p>
+    </div>
+    <ul class="awards">
+      <li>Deloitte Technology Fast 50 &amp; Fast 500 — fastest-growing company (2006, 2015, 2016)</li>
+      <li>EU Horizon 2020 funding &amp; Seal of Excellence</li>
+      <li>Best software company &amp; innovation awards — 30+ in total</li>
+      <li>Trusted by global hotel brands: Kempinski, Mövenpick, Radisson, Wyndham, Rixos</li>
+    </ul>
+  </div>
+</section>
+
+<section id="webee">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Our Product</span>
+      <h2>WeBee — We Enable BEtter Engagement</h2>
+      <p>A modular guest experience platform connecting hotel guests, staff and revenue — live in 220+ properties across 26 countries. Visit <a href="https://www.getwebee.com" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;text-decoration:none;">getwebee.com</a></p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>WeBee Suite</h3>
+        <p>Branded guest mobile app: online check-in/out, digital keys, in-room ordering, requests, messaging and surveys.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🛎️</div>
+        <h3>EaSee</h3>
+        <p>Hotel operations platform unifying front office, housekeeping, maintenance and F&amp;B with real-time request routing and reporting.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>WeBee Insta</h3>
+        <p>AI agent for Instagram, WhatsApp, Facebook, Telegram and Apple Messages that turns social DMs into direct bookings.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✍️</div>
+        <h3>WeBee Reply</h3>
+        <p>AI-generated, on-brand responses to guest reviews in multiple languages — in seconds.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💰</div>
+        <h3>WeBee Upsell</h3>
+        <p>Revenue-sharing ancillary upsell for F&amp;B, spa, upgrades and transfers — no setup fees.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📖</div>
+        <h3>Hotel Builder</h3>
+        <p>QR-based digital guest guide that any hotel can deploy in one minute, no coding required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">What We Do</span>
+      <h2>Services &amp; Expertise</h2>
+      <p>Beyond WeBee, we put decades of engineering experience to work for our clients.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">🧠</div>
+        <h3>AI Solutions</h3>
+        <p>AI agents, LLM-powered automation, chatbots and intelligent workflows — from conversational booking agents to automated review management, built on production-grade AI.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🏨</div>
+        <h3>Hospitality Technology</h3>
+        <p>End-to-end digital guest journey: mobile apps, operations tools and revenue products designed for hotels of every size, from boutiques to global chains.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📲</div>
+        <h3>Mobile Development</h3>
+        <p>Native iOS and Android development, proven at scale with apps built for Turkcell, TTNET, Yemeksepeti and international finance and insurance clients.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🎨</div>
+        <h3>UX &amp; Product Design</h3>
+        <p>Customer-centered design — we design, build and iterate products that people actually enjoy using.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Contact</span>
+      <h2>Let's talk</h2>
+      <p>Have a project in mind, or want to see WeBee in action?</p>
+    </div>
+    <div class="contact-grid">
+      <div class="card">
+        <div class="icon">📍</div>
+        <h3>Istanbul HQ</h3>
+        <p>Çifte Havuzlar Mah. Eski Londra Asfaltı Cd.<br>Kuluçka Mrk. A2 Blok No: 151/1B/Z06<br>Esenler / Istanbul, Türkiye</p>
+      </div>
+      <div class="card">
+        <div class="icon">✉️</div>
+        <h3>Email</h3>
+        <p><a href="mailto:info@donetr.com">info@donetr.com</a></p>
+      </div>
+      <div class="card">
+        <div class="icon">📞</div>
+        <h3>Phone</h3>
+        <p><a href="tel:+902124837176">+90 212 483 71 76</a><br>Mon–Fri, 09:00–18:00</p>
+      </div>
+      <div class="card">
+        <div class="icon">🇬🇧</div>
+        <h3>United Kingdom</h3>
+        <p>WeBee Technology Solutions Ltd.<br><a href="https://www.getwebee.com" target="_blank" rel="noopener">getwebee.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Done Iletisim Bilgi Sistemleri ve Yayincilik San. ve Tic. A.S. All rights reserved.</p>
+    <p><a href="https://www.getwebee.com" target="_blank" rel="noopener">WeBee</a> is a registered trademark of Done.</p>
+  </div>
+</footer>
+
+</body>
+</html>
