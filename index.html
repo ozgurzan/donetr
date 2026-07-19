@@ -76,20 +76,29 @@
   }
   .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
   .logo { display: flex; align-items: center; text-decoration: none; }
-  .logo img { height: 42px; width: auto; display: block; }
+  .logo img { height: 46px; width: auto; display: block; }
   nav a { color: var(--muted); text-decoration: none; margin-left: 28px; font-size: .95rem; font-weight: 500; }
   nav a:hover { color: var(--accent); }
   @media (max-width: 640px) { nav a { margin-left: 16px; font-size: .85rem; } }
 
   /* Hero */
-  .hero { padding: 96px 0 80px; text-align: center; }
+  .hero {
+    padding: 110px 0 90px; text-align: center;
+    background:
+      linear-gradient(rgba(11, 27, 46, .8), rgba(11, 27, 46, .88)),
+      url('hero-bg.jpg') center / cover no-repeat,
+      linear-gradient(160deg, #0b1b2e 0%, #14304f 100%);
+    color: #fff;
+  }
   .hero h1 {
     font-size: clamp(2rem, 5vw, 3.2rem);
     font-weight: 800; letter-spacing: -1px; line-height: 1.15;
-    max-width: 800px; margin: 0 auto 20px;
+    max-width: 800px; margin: 0 auto 20px; color: #fff;
   }
-  .hero h1 em { font-style: normal; color: var(--accent); }
-  .hero p { font-size: 1.15rem; color: var(--muted); max-width: 640px; margin: 0 auto 36px; }
+  .hero h1 em { font-style: normal; color: #6ea8ff; }
+  .hero p { font-size: 1.15rem; color: rgba(255,255,255,.82); max-width: 640px; margin: 0 auto 36px; }
+  .hero .btn.ghost { color: #fff; border-color: #fff; }
+  .hero .btn.ghost:hover { background: #fff; color: #0b1b2e; }
   .btn {
     display: inline-block; padding: 13px 28px; border-radius: 8px;
     font-weight: 600; font-size: 1rem; text-decoration: none;
@@ -152,7 +161,7 @@
 
 <header>
   <div class="container nav">
-    <a class="logo" href="#"><img src="done-logo.png" alt="Done — Communication &amp; Information Systems"></a>
+    <a class="logo" href="#"><img src="done-logo-mark.png" alt="Done — Communication &amp; Information Systems"></a>
     <nav>
       <a href="#about">About</a>
       <a href="#webee">WeBee</a>
@@ -163,11 +172,13 @@
   </div>
 </header>
 
-<section class="hero container">
-  <h1>We build software and <em>AI-powered products</em> that people love to use</h1>
-  <p>Done is an Istanbul-based software company with 25+ years of experience — from powering mobile operators to creating <strong>WeBee</strong>, the guest engagement platform trusted by hotels worldwide.</p>
-  <a class="btn" href="https://www.getwebee.com" target="_blank" rel="noopener">Discover WeBee</a>
-  <a class="btn ghost" href="#contact">Get in Touch</a>
+<section class="hero">
+  <div class="container">
+    <h1>We build software and <em>AI-powered products</em> that people love to use</h1>
+    <p>Done is an Istanbul-based software company with 25+ years of experience — from powering mobile operators to creating <strong>WeBee</strong>, the guest engagement platform trusted by hotels worldwide.</p>
+    <a class="btn" href="https://www.getwebee.com" target="_blank" rel="noopener">Discover WeBee</a>
+    <a class="btn ghost" href="#contact">Get in Touch</a>
+  </div>
 </section>
 
 <div class="stats container">
@@ -327,6 +338,7 @@
 
 <footer>
   <div class="container">
+    <img src="done-logo.png" alt="Done — Communication &amp; Information Systems" style="height:64px;width:auto;margin-bottom:16px;">
     <p>© 2026 Done Iletisim Bilgi Sistemleri ve Yayincilik San. ve Tic. A.S. All rights reserved.</p>
     <p><a href="https://www.getwebee.com" target="_blank" rel="noopener">WeBee</a> is a registered trademark of Done.</p>
   </div>
