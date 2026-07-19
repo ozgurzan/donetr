@@ -11,10 +11,13 @@
 <meta property="og:title" content="Done — Software, AI &amp; Hospitality Technology">
 <meta property="og:description" content="Istanbul-based software company with 25+ years of experience. Creator of WeBee, the guest engagement platform used by 220+ hotels in 26 countries.">
 <meta property="og:site_name" content="Done">
+<meta property="og:image" content="https://www.donetr.com/done-logo.png">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.donetr.com/done-logo.png">
 <meta name="twitter:title" content="Done — Software, AI &amp; Hospitality Technology">
 <meta name="twitter:description" content="Istanbul-based software company. Creator of WeBee, the guest engagement platform for hotels.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -22,6 +25,7 @@
   "name": "Done Iletisim Bilgi Sistemleri ve Yayincilik San. ve Tic. A.S.",
   "alternateName": "Done",
   "url": "https://www.donetr.com/",
+  "logo": "https://www.donetr.com/done-logo.png",
   "email": "info@donetr.com",
   "telephone": "+90-212-483-7176",
   "foundingLocation": "Istanbul, Türkiye",
@@ -71,8 +75,8 @@
     border-bottom: 1px solid var(--border);
   }
   .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-  .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -.5px; color: var(--text); text-decoration: none; }
-  .logo span { color: var(--accent); }
+  .logo { display: flex; align-items: center; text-decoration: none; }
+  .logo img { height: 42px; width: auto; display: block; }
   nav a { color: var(--muted); text-decoration: none; margin-left: 28px; font-size: .95rem; font-weight: 500; }
   nav a:hover { color: var(--accent); }
   @media (max-width: 640px) { nav a { margin-left: 16px; font-size: .85rem; } }
@@ -148,7 +152,7 @@
 
 <header>
   <div class="container nav">
-    <a class="logo" href="#">done<span>.</span></a>
+    <a class="logo" href="#"><img src="done-logo.png" alt="Done — Communication &amp; Information Systems"></a>
     <nav>
       <a href="#about">About</a>
       <a href="#webee">WeBee</a>
